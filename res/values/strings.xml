@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">NetEaseNews</string>
+
+
+
+    <!-- 下拉刷新 -->
+    <string name="pull_to_refresh_pull_label">下拉刷新</string>
+    <string name="pull_to_refresh_release_label">释放立即刷新</string>
+    <string name="pull_to_refresh_refreshing_label">正在刷新</string>
+    <string name="pull_to_refresh_tap_label">点击刷新</string>
+    <string name="title_activity_collect">CollectActivity</string>
+    <string name="title_activity_item">ItemActivity</string>
+    <string name="title_activity_hospital">Hospital</string>
+    <string name="title_activity_hospitalitem">HospitalitemActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
 </resources>
