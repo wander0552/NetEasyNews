@@ -59,8 +59,7 @@ public class UnderlinePageIndicator extends View implements PageIndicator {
     private boolean mIsDragging;
 
     private final Runnable mFadeRunnable = new Runnable() {
-      @Override
-      public void run() {
+      @Override public void run() {
         if (!mFades) return;
 
         final int alpha = Math.max(mPaint.getAlpha() - mFadeBy, 0);
@@ -279,8 +278,7 @@ public class UnderlinePageIndicator extends View implements PageIndicator {
         mViewPager.setOnPageChangeListener(this);
         invalidate();
         post(new Runnable() {
-            @Override
-            public void run() {
+            @Override public void run() {
                 if (mFades) {
                     post(mFadeRunnable);
                 }

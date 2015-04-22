@@ -8,4 +8,5 @@ package com.wander.MyUtils;
 public class UrlUtils {
     final static String Welcome="http://s.cimg.163.com/pi/img1.126.net/channel6/2015/019253/10801476_0420.jpg.720x2147483647.75.auto.webp";
 
+
 }

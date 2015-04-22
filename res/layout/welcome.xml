@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="130dp"
                 android:id="@+id/welcome_logo"
-                android:src="@drawable/logo60"
+                android:src="@drawable/cover_template_start"
                 android:layout_marginLeft="-20dp"
                 />
 

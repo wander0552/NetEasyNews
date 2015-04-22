@@ -3,17 +3,67 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:background="#FFFF"
         >
+
+    <RelativeLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FF00"
+            >
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/night_top_navigation_plusicon"
+                android:id="@+id/titleBar_sliding"
+                android:layout_marginLeft="5dp"
+                />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:id="@+id/titleBar_title"
+                android:layout_toRightOf="@id/titleBar_sliding"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/night_contentview_hd_loading_logo"
+                />
+
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:id="@+id/titleBar_setting"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/setting_icon_highlight"
+                />
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/titleBar_user"
+                android:scaleType="fitCenter"
+                android:baselineAlignBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/titleBar_setting"
+                android:src="@drawable/night_login_username_icon"
+                />
+    </RelativeLayout>
+
     <com.viewpagerindicator.TabPageIndicator
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:id="@+id/TabPage"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/TabPage"
+            />
 
     <android.support.v4.view.ViewPager
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:id="@+id/main_viewpager"
-        />
+            />
 
 </LinearLayout>

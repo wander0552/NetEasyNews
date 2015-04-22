@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:background="#FFFF"
+              android:layout_height="match_parent">
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/sliding_item_image"
+            android:src="@drawable/icon"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000"
+            android:text="新闻"
+            android:id="@+id/sliding_name"
+            android:layout_marginLeft="2dp"
+            />
+
+</LinearLayout>

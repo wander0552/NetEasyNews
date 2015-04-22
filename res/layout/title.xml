@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#FF00"
+        >
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/night_top_navigation_plusicon"
+            android:id="@+id/titleBar_sliding"
+            />
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/titleBar_title"
+            android:layout_toRightOf="@id/titleBar_sliding"
+            android:layout_marginLeft="15dp"
+            android:layout_alignBaseline="@id/titleBar_sliding"
+            android:background="@drawable/night_contentview_hd_loading_logo"
+            />
+
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:id="@+id/titleBar_setting"
+            android:scaleType="fitCenter"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/setting_icon_highlight"
+            />
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:id="@+id/titleBar_user"
+                android:scaleType="fitCenter"
+                android:baselineAlignBottom="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/titleBar_setting"
+                android:src="@drawable/night_login_username_icon"
+                />
+</RelativeLayout>
