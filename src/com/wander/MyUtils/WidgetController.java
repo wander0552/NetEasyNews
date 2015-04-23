@@ -2,6 +2,7 @@ package com.wander.MyUtils;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 /**
@@ -42,7 +43,7 @@ public class WidgetController {
     {
         ViewGroup.MarginLayoutParams margin=new ViewGroup.MarginLayoutParams(view.getLayoutParams());
         margin.setMargins(x,margin.topMargin, x+margin.width, margin.bottomMargin);
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(margin);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(margin);
         view.setLayoutParams(layoutParams);
     }
     /*
@@ -53,7 +54,7 @@ public class WidgetController {
     {
         ViewGroup.MarginLayoutParams margin=new ViewGroup.MarginLayoutParams(view.getLayoutParams());
         margin.setMargins(margin.leftMargin,y, margin.rightMargin, y+margin.height);
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(margin);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(margin);
         view.setLayoutParams(layoutParams);
     }
     /*
@@ -64,7 +65,7 @@ public class WidgetController {
     {
         ViewGroup.MarginLayoutParams margin=new ViewGroup.MarginLayoutParams(view.getLayoutParams());
         margin.setMargins(x,y, x+margin.width, y+margin.height);
-        RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(margin);
+        LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(margin);
         view.setLayoutParams(layoutParams);
     }
 }

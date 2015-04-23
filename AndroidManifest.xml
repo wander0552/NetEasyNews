@@ -15,25 +15,27 @@
 
     <application
             android:label="@string/app_name"
-            android:icon="@drawable/ic_launcher"
+            android:icon="@drawable/icon_community"
             android:name=".AppCreate"
-            android:theme="@android:style/Theme.NoTitleBar"
             >
         <activity
                 android:name=".Activities.WelcomeActivity"
                 android:label="@string/app_name"
-
+                android:theme="@android:style/Theme.NoTitleBar"
                 >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!--android:theme="@style/CustomTabPageIndicator"-->
         <activity
                 android:name=".Activities.MainActivity"
-
                 />
-        <activity android:name=".Activities.baseActivity"
+        <activity
+                android:name=".Activities.baseActivity"
+                android:theme="@style/CustomTitle"
                 />
     </application>
 </manifest>

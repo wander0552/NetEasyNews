@@ -38,14 +38,16 @@ public class WelcomeActivity extends Activity {
         SharedPreferences preference = PreferenceManager.getDefaultSharedPreferences(this);
         boolean isFirst = preference.getBoolean("isFirst", true);
         if (isFirst) {
-            initDb();
+            initTitleDb();
         }
         SharedPreferences.Editor edit = preference.edit();
         edit.putBoolean("isFirst", false);
         edit.commit();
     }
 
-    private void initDb() {
-        initTitles.initNews(this);
+    private void initTitleDb() {
+        initTitles.initNews(getApplicationContext());
+        initTitles.initPic(getApplicationContext());
+        initTitles.initVideo(getApplicationContext());
     }
 }

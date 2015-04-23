@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="user"
+          android:id="@+id/menu_user"
+          android:showAsAction="always"
+          android:orderInCategory="100"
+          android:icon="@drawable/night_login_username_icon"
+          />
+    <item
+        android:icon="@drawable/setting_icon_highlight"
+        android:id="@+id/menu_setting"
+        android:showAsAction="always"
+        android:orderInCategory="100"
+        android:title="setting"
+        />
+
+</menu>

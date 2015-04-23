@@ -19,7 +19,21 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="StyledIndicators" parent="@android:style/Theme.NoTitleBar">
+    <!--titleBar的自定义-->
+
+    <style name="titleColor">
+        <item name="android:background">#FF00</item>
+    </style>
+
+    <style name="CustomTitle" parent="android:Theme.Light">
+        <item name="android:windowTitleSize">50dp</item>
+        <item name="android:windowTitleBackgroundStyle">@style/titleColor</item>
+    </style>
+
+
+    <!--tabIndicator样式-->
+
+    <style name="StyledIndicators" parent="Widget.TabPageIndicator">
         <item name="vpiTabPageIndicatorStyle">@style/CustomTabPageIndicator</item>
     </style>
 

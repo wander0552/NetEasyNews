@@ -158,7 +158,7 @@ public class TabPageIndicator extends HorizontalScrollView implements OnPageChan
         final TabView tabView = new TabView(getContext());
         tabView.setTextSize(22);
         tabView.setTextColor(Color.BLACK);
-        tabView.setPadding(5,8,5,8);
+        tabView.setPadding(15,10,15,10);
         tabView.mIndex = index;
         tabView.setFocusable(true);
         tabView.setOnClickListener(mTabClickListener);
@@ -182,8 +182,10 @@ public class TabPageIndicator extends HorizontalScrollView implements OnPageChan
             TabView tabView = (TabView) mTabLayout.getChildAt(arg0 + 1);
             tabView.setTextColor(Color.BLACK);
         }
-        final TabView tabView1 = (TabView) mTabLayout.getChildAt(arg0);
-        tabView1.setTextColor(Color.RED);
+        if (count!=0) {
+            final TabView tabView1 = (TabView) mTabLayout.getChildAt(arg0);
+            tabView1.setTextColor(Color.RED);
+        }
         if (arg0 > 0) {
             TabView tabView2 = (TabView) mTabLayout.getChildAt(arg0 - 1);
             tabView2.setTextColor(Color.BLACK);
@@ -257,7 +259,7 @@ public class TabPageIndicator extends HorizontalScrollView implements OnPageChan
 
         final int tabCount = mTabLayout.getChildCount();
         for (int i = 0; i < tabCount; i++) {
-            final View child = mTabLayout.getChildAt(i);
+            final TabView child = (TabView) mTabLayout.getChildAt(i);
             final boolean isSelected = (i == item);
             child.setSelected(isSelected);
             if (isSelected) {
