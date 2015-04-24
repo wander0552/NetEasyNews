@@ -7,7 +7,7 @@ import com.lidroid.xutils.db.annotation.Table;
  * Date:15-4-23
  * Email:18955260352@163.com
  */
-@Table(name = "downnews",execAfterTableCreated = "CREATE UNIQUE INDEX downnews_index ON titles(id)")
+@Table(name = "downnews",execAfterTableCreated = "CREATE UNIQUE INDEX downnews_index ON downnews(newid)")
 public class DownNews extends EntityBase {
     private int newid;
     private int navid;

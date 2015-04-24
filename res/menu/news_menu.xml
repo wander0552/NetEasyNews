@@ -10,9 +10,34 @@
     <item
         android:icon="@drawable/setting_icon_highlight"
         android:id="@+id/menu_setting"
-        android:showAsAction="always"
+        android:showAsAction="never"
         android:orderInCategory="100"
-        android:title="setting"
+        android:title="设置"
         />
+
+    <item
+        android:icon="@drawable/cloud_mini"
+        android:id="@+id/weather"
+        android:showAsAction="never"
+        android:orderInCategory="100"
+        android:title="温度"
+        />
+
+    <item
+        android:icon="@drawable/contenttoolbar_hd_download_light"
+        android:id="@+id/download"
+        android:showAsAction="never"
+        android:orderInCategory="100"
+        android:title="下载"
+        />
+
+    <item
+        android:icon="@drawable/night_searchbar_icon"
+        android:id="@+id/search"
+        android:showAsAction="never"
+        android:orderInCategory="100"
+        android:title="搜索"
+        />
+
 
 </menu>

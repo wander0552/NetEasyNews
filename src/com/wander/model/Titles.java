@@ -11,7 +11,7 @@ import java.util.IdentityHashMap;
  * Email:18955260352@163.com
  */
 
-@Table(name = "titles" ,execAfterTableCreated = "CREATE UNIQUE INDEX titles_index ON titles(id)")
+@Table(name = "titles" ,execAfterTableCreated = "CREATE UNIQUE INDEX titles_index ON titles(navid)")
 public class Titles extends EntityBase{
     @Column(column = "name")
     private String name;

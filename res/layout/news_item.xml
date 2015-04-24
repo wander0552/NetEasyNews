@@ -28,24 +28,29 @@
                 android:id="@+id/textView_news_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="subject" />
+                android:textColor="#F000"
+                android:textSize="20sp"
+                />
 
 
         <TextView
                 android:id="@+id/textView_news_content"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:alpha="0.8"
-                android:text="summary"
+                android:alpha="0.6"
+                android:textColor="#F000"
+                android:textSize="15sp"
+                android:lines="2"
                 />
     </LinearLayout>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="gentie"
             android:layout_gravity="right|bottom"
             android:layout_marginBottom="8dp"
             android:layout_marginRight="8dp"
+            android:alpha="0.8"
+            android:textColor="#F000"
             android:id="@+id/textview_news_comment"
             />
 

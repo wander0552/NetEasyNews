@@ -8,7 +8,7 @@ import com.lidroid.xutils.db.annotation.Table;
  * Date:15-4-23
  * Email:18955260352@163.com
  */
-@Table(name = "topnews",execAfterTableCreated = "CREATE UNIQUE INDEX topnews_index ON titles(id)")
+@Table(name = "topnews",execAfterTableCreated = "CREATE UNIQUE INDEX topnews_index ON topnews(topid)")
 public class TopNews extends EntityBase {
     @Column(column = "topid")
     private int topid;

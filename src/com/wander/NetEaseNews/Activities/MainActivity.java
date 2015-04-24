@@ -79,8 +79,8 @@ public class MainActivity extends baseActivity {
 
 
         tabPageIndicator.setViewPager(viewPager);
-        tabPageIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
+        tabPageIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
 
             @Override
@@ -90,22 +90,22 @@ public class MainActivity extends baseActivity {
              */
             public void onPageScrolled(int i, float v, int i1) {
 
-                Log.d("scroll", width +"   ");
-                float move = width * v;
+//                Log.d("scroll", width +"   ");
+//                float move = width * v;
 //                underLine.setLayoutParams(new ViewGroup.LayoutParams(width, 2));
-                underLine.setTranslationX(move);
+//                underLine.setTranslationX(move);
 //                WidgetController.setLayoutX(underLine, move);
             }
 
             @Override
             public void onPageSelected(int i) {
-                Log.d("select",i+"");
+//                Log.d("select",i+"");
 
             }
 
             @Override
             public void onPageScrollStateChanged(int i) {
-                underLine.setTranslationX(width*i);
+//                underLine.setTranslationX(width*i);
 
             }
         });
@@ -117,18 +117,19 @@ public class MainActivity extends baseActivity {
     void setTitles(String nav) {
         List<Titles> list = new ArrayList<Titles>();
         try {
-            list = db.findAll(Selector.from(Titles.class).where("type", "=", nav).and("show", "=", "1"));
-            Log.d("list", list.toString());
+            List<Titles> titlesList = db.findAll(Selector.from(Titles.class).where("type", "=", nav).and("show", "=", "1"));
+            if (titlesList != null) {
+                list = titlesList;
+                Log.d("list", list.toString());
+                width = tabPageIndicator.getWidth();
+                width = width / list.size();
+                titles.clear();
+                titles.addAll(list);
+                adapter.notifyDataSetChanged();
+                tabPageIndicator.notifyDataSetChanged();
+            }
         } catch (DbException e) {
             e.printStackTrace();
-        }
-        if (list != null) {
-            width = tabPageIndicator.getWidth();
-            width=width/list.size();
-            titles.clear();
-            titles.addAll(list);
-            adapter.notifyDataSetChanged();
-            tabPageIndicator.notifyDataSetChanged();
         }
     }
 
@@ -172,14 +173,6 @@ public class MainActivity extends baseActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.news_menu, menu);
-        MenuItem news_user = menu.findItem(R.id.menu_user);
-        MenuItem new_setting = menu.findItem(R.id.menu_setting);
-
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

@@ -156,9 +156,10 @@ public class TabPageIndicator extends HorizontalScrollView implements OnPageChan
 
     private void addTab(int index, CharSequence text, int iconResId) {
         final TabView tabView = new TabView(getContext());
-        tabView.setTextSize(22);
+        tabView.setTextSize(20);
         tabView.setTextColor(Color.BLACK);
-        tabView.setPadding(15,10,15,10);
+        tabView.setAlpha(0.7f);
+        tabView.setPadding(15,12,15,12);
         tabView.mIndex = index;
         tabView.setFocusable(true);
         tabView.setOnClickListener(mTabClickListener);

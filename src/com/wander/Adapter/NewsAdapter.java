@@ -2,6 +2,7 @@ package com.wander.Adapter;
 
 import android.content.Context;
 import android.os.Environment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.lidroid.xutils.BitmapUtils;
+import com.lidroid.xutils.cache.FileNameGenerator;
 import com.wander.MyUtils.SDCardHelper;
+import com.wander.NetEaseNews.AppCreate;
 import com.wander.NetEaseNews.R;
 import com.wander.model.DownNews;
 
@@ -34,17 +37,10 @@ public class NewsAdapter extends BaseAdapter {
         this.context = context;
         this.newsList = newsList;
         inflater = LayoutInflater.from(context);
-        File cacheDir = new File(SDCardHelper.getSDCardPublicDir(Environment.DIRECTORY_PICTURES), File.separator + "neteasy");
-        if (!cacheDir.exists()) {
-            cacheDir.mkdirs();
-        }
 
-        //指定默认的缓存路径
-        bitmapUtils = new BitmapUtils(context, cacheDir.getAbsolutePath());
-        //设置加载用图片等
-        bitmapUtils.configDefaultLoadingImage(R.drawable.ic_launcher);
-        bitmapUtils.configDefaultLoadFailedImage(R.drawable.night_icon_service);
-
+        AppCreate applicationContext = (AppCreate) context.getApplicationContext();
+        bitmapUtils= applicationContext.getBitmapUtils();
+//        bitmapUtils = new BitmapUtils(context);
     }
 
     @Override
@@ -83,16 +79,12 @@ public class NewsAdapter extends BaseAdapter {
             holder.news_title = (TextView) ret.findViewById(R.id.textView_news_title);
             ret.setTag(holder);
         }
-
-
         DownNews downNews = newsList.get(position);
         if (downNews != null) {
-            holder.news_comment.setText(downNews.getComment_total());
+            holder.news_comment.setText(downNews.getComment_total() + "跟帖");
             holder.news_title.setText(downNews.getTitle());
             holder.news_content.setText(downNews.getContent());
-
             bitmapUtils.display(holder.news_pic, downNews.getCover_pic());
-
         }
         return ret;
     }
